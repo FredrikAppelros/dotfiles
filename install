@@ -2,10 +2,14 @@
 
 DOTFILESDIR="$(readlink -e $(dirname $0))"
 
+run_scripts () {
+  for file in $(find $DOTFILESDIR -name $1 | xargs); do
+    sh -c "$file"
+  done
+}
+
 # Run preinstall scripts
-for file in $(find $DOTFILESDIR -name preinstall.sh | xargs); do
-  sh -c "$file"
-done
+run_scripts preinstall.sh
 
 # Install packages
 sudo apt-get update && sudo apt-get install -y $(cat packages | xargs)
@@ -14,9 +18,10 @@ sudo apt-get update && sudo apt-get install -y $(cat packages | xargs)
 git submodule update --init --recursive
 
 # Run install scripts
-for file in $(find $DOTFILESDIR -name install.sh | xargs); do
-  sh -c "$file"
-done
+run_scripts install.sh
+
+# Run postinstall scripts
+run_scripts postinstall.sh
 
 # Create symbolic links
 for target in $(find $DOTFILESDIR -name "*.symlink"); do
