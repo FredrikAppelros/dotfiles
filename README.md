@@ -9,3 +9,7 @@ Well, actually, that's not entirely true. This repository does not only contain 
 Just run the provided installation script, and you should be all set:
 
     ./install
+
+## Credits
+
+This project has been greatly inspired by Zach Holman's [dotfiles](https://github.com/holman/dotfiles).
