@@ -1,0 +1,10 @@
+aptitude
+build-essential
+curl
+exuberant-ctags
+git
+i3
+redshift-gtk
+vim
+wget
+zsh

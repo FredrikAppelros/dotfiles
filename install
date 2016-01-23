@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Install packages
+sudo apt-get update && sudo apt-get install -y $(cat packages | xargs)
+
+# Initialize submodules
+git submodule update --init --recursive
+
+# Install modules
+for script in $(find . -name install.sh | xargs); do
+  sh -c "$script"
+done

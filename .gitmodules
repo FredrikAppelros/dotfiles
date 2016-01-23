@@ -1,0 +1,6 @@
+[submodule "fonts/powerline"]
+	path = fonts/powerline
+	url = https://github.com/powerline/fonts
+[submodule "zsh/prezto"]
+	path = zsh/prezto
+	url = https://github.com/FredrikAppelros/prezto
