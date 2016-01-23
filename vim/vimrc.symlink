@@ -1,0 +1,29 @@
+" Make vim act as vim
+set nocompatible
+
+" Enable custom indentation and syntax highlighting
+filetype plugin indent on
+syntax on
+
+" Make backspace work
+set backspace=indent,eol,start
+" Have a 1000 line history
+set history=1000
+" Reload files on change
+set autoread
+" Incremental searching
+set incsearch
+" Use grep for grep
+set grepprg=grep\ -nH\ $*
+" Show ruler
+set ruler
+" Display tabs and trailing spaces
+set list listchars=tab:»·,trail:●
+" Indentation assistance
+set autoindent
+set smarttab
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
