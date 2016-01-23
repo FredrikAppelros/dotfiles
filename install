@@ -1,5 +1,7 @@
 #!/bin/sh
 
+DOTFILESDIR="$(readlink -e $(dirname $0))"
+
 # Install packages
 sudo apt-get update && sudo apt-get install -y $(cat packages | xargs)
 
@@ -9,4 +11,10 @@ git submodule update --init --recursive
 # Install modules
 for script in $(find . -name install.sh | xargs); do
   sh -c "$script"
+done
+
+# Create symbolic links
+for target in $(find -H $DOTFILESDIR -maxdepth 2 -not -path '*.git*' -name '*.symlink'); do
+  link="$HOME/.$(basename ${target%.*})"
+  ln -s $target $link
 done
