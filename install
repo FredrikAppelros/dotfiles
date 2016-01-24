@@ -24,7 +24,8 @@ run_scripts install.sh
 run_scripts postinstall.sh
 
 # Create symbolic links
-for target in $(find $DOTFILESDIR -name "*.symlink"); do
+ln -s "$DOTFILESDIR/bin" "$HOME/bin"
+for target in $(find "$DOTFILESDIR" -name "*.symlink"); do
   link="$HOME/.$(basename ${target%.*})"
-  ln -s $target $link
+  ln -s "$target" "$link"
 done
