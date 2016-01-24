@@ -1,6 +1,7 @@
 aptitude
 build-essential
 curl
+docker-engine
 exuberant-ctags
 git
 i3
