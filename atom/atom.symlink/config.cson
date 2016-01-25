@@ -1,0 +1,27 @@
+"*":
+  core:
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      "node_modules"
+      "bower_components"
+    ]
+    projectHome: "/home/fredrik/projects"
+    themes: [
+      "seti-ui"
+      "seti-syntax"
+    ]
+  editor:
+    invisibles: {}
+    softWrap: true
+  "exception-reporting":
+    userId: "5248112c-7f8b-d473-de80-d5722032bc35"
+  minimap:
+    plugins:
+      "find-and-replace": true
+      "git-diff": true
+      linter: true
+      selection: true
+  welcome:
+    showOnStartup: false
