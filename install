@@ -1,16 +1,14 @@
 #!/bin/sh
 
-export DOTFILESDIR="$(readlink -e $(dirname $0))"
+export DOTFILESDIR="$(readlink -e "$(dirname $0)")"
 
 run_scripts () {
-  for file in $(find $DOTFILESDIR -name $1 | xargs); do
-    sh -c "$file"
-  done
+  find $DOTFILESDIR -name $1 -exec sh -c {} \;
 }
 
 # Create symbolic links
 ln -s "$DOTFILESDIR/bin" "$HOME/bin"
-for target in $(find "$DOTFILESDIR" -name "*.symlink"); do
+for target in "$DOTFILESDIR"/**/*.symlink; do
   link="$HOME/.$(basename ${target%.*})"
   ln -s "$target" "$link"
 done
