@@ -6,6 +6,7 @@ exuberant-ctags
 git
 i3
 redshift-gtk
+shellcheck
 spotify-client
 vim
 wget
