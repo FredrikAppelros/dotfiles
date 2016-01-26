@@ -10,4 +10,5 @@ shellcheck
 spotify-client
 vim
 wget
+xclip
 zsh
