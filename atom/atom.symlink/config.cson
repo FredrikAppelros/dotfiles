@@ -17,6 +17,8 @@
     softWrap: true
   "exception-reporting":
     userId: "5248112c-7f8b-d473-de80-d5722032bc35"
+  linter:
+    showErrorPanel: false
   minimap:
     plugins:
       "find-and-replace": true
