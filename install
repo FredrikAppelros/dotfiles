@@ -8,6 +8,13 @@ run_scripts () {
   done
 }
 
+# Create symbolic links
+ln -s "$DOTFILESDIR/bin" "$HOME/bin"
+for target in $(find "$DOTFILESDIR" -name "*.symlink"); do
+  link="$HOME/.$(basename ${target%.*})"
+  ln -s "$target" "$link"
+done
+
 # Run preinstall scripts
 run_scripts preinstall.sh
 
@@ -22,10 +29,3 @@ run_scripts install.sh
 
 # Run postinstall scripts
 run_scripts postinstall.sh
-
-# Create symbolic links
-ln -s "$DOTFILESDIR/bin" "$HOME/bin"
-for target in $(find "$DOTFILESDIR" -name "*.symlink"); do
-  link="$HOME/.$(basename ${target%.*})"
-  ln -s "$target" "$link"
-done
