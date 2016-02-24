@@ -4,3 +4,6 @@
 [submodule "zsh/prezto"]
 	path = zsh/prezto
 	url = https://github.com/FredrikAppelros/prezto
+[submodule "node/nvm.symlink"]
+	path = node/nvm.symlink
+	url = https://github.com/creationix/nvm.git
