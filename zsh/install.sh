@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-PREZTODIR="$(readlink -e $(dirname $0))/prezto"
+PREZTODIR="$(readlink -e "$(dirname $0)/prezto")"
 
 # Symlink Prezto
 setopt EXTENDED_GLOB
