@@ -3,7 +3,19 @@
 	email = fredrik.appelros@gmail.com
 [core]
 	editor = vim
+	pager = less -x4
 [push]
 	default = simple
 [help]
 	autocorrect = 1
+[rerere]
+	enabled = true
+[log]
+	abbrevCommit = true
+	decorate = short
+	date = relative
+[diff]
+	algorithm = patience
+[alias]
+	lg = log --oneline
+	lp = log -p -M
