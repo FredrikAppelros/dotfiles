@@ -5,6 +5,9 @@ docker-engine
 exuberant-ctags
 git
 i3
+libbz2-dev
+libreadline-dev
+libssl-dev
 redshift-gtk
 shellcheck
 spotify-client
