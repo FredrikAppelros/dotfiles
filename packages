@@ -11,6 +11,7 @@ libssl-dev
 redshift-gtk
 shellcheck
 spotify-client
+texlive-full
 vim
 wget
 xclip
