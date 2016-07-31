@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TMPPATH=/tmp/google-chrome.deb
+TMPPATH=$(mktemp)
 
 # Download latest package
 wget -q -O $TMPPATH https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb

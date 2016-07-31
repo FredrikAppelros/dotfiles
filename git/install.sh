@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TMPPATH=/tmp/hub.tgz
+TMPPATH=$(mktemp)
 
 # Get latest version
 version=$(curl -s https://github.com/github/hub/releases/latest | grep -oP "(\d\.?)+")

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TMPPATH=/tmp/atom.deb
+TMPPATH=$(mktemp)
 
 # Download latest package
 wget -q -O $TMPPATH https://atom.io/download/deb
