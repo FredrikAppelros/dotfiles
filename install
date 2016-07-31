@@ -1,15 +1,16 @@
-#!/bin/sh
+#!/bin/bash
 
-export DOTFILESDIR="$(readlink -e "$(dirname $0)")"
+DOTFILESDIR="$(readlink -e "$(dirname "$0")")"
+export DOTFILESDIR
 
 run_scripts () {
-  find $DOTFILESDIR -name $1 -exec sh -c {} \;
+  find "$DOTFILESDIR" -name "$1" -exec sh -c '$1' _ {} \;
 }
 
 # Create symbolic links
 ln -s "$DOTFILESDIR/bin" "$HOME/bin"
 for target in "$DOTFILESDIR"/**/*.symlink; do
-  link="$HOME/.$(basename ${target%.*})"
+  link=$HOME/.$(basename "${target%.*}")
   ln -s "$target" "$link"
 done
 
@@ -17,7 +18,8 @@ done
 run_scripts preinstall.sh
 
 # Install packages
-sudo apt-get update && sudo apt-get install -y $(cat packages | xargs)
+packages=($(find "$DOTFILESDIR" -name packages -exec cat {} + | sort -u | xargs))
+sudo apt-get update && sudo apt-get install -y "${packages[@]}"
 
 # Initialize submodules
 git submodule update --init --recursive
