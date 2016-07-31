@@ -18,6 +18,7 @@
   "exception-reporting":
     userId: "5248112c-7f8b-d473-de80-d5722032bc35"
   linter:
+    displayLinterInfo: false
     showErrorPanel: false
   minimap:
     plugins:
@@ -25,5 +26,7 @@
       "git-diff": true
       linter: true
       selection: true
+  "seti-ui":
+    compactView: true
   welcome:
     showOnStartup: false
