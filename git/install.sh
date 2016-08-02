@@ -6,7 +6,7 @@ TMPPATH=$(mktemp)
 version=$(curl -s https://github.com/github/hub/releases/latest | grep -oP "(\d\.?)+")
 
 # Download archive
-wget -O $TMPPATH "https://github.com/github/hub/releases/download/v$version/hub-linux-amd64-$version.tgz"
+wget -q -O $TMPPATH "https://github.com/github/hub/releases/download/v$version/hub-linux-amd64-$version.tgz"
 
 # Extract archive
 tar xzf $TMPPATH -C /tmp
