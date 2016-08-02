@@ -2,6 +2,10 @@
 
 PYDIR="$(readlink -e "$(dirname $0)")"
 
+# Initialize pyenv for the rest of this session
+PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+
 # Install modern Python
 pyenv install 3.5.2
 pyenv global 3.5.2
