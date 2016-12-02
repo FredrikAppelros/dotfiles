@@ -33,7 +33,7 @@ run_scripts preinstall.sh
 
 # Install packages
 info "Installing packages"
-packages=($(find "$DOTFILESDIR" -name packages -exec cat {} + | sort -u | xargs))
+packages=($(find "$DOTFILESDIR" -name packages -type f -exec cat {} + | sort -u | xargs))
 sudo apt-get update && sudo apt-get install -y "${packages[@]}"
 
 # Initialize submodules
