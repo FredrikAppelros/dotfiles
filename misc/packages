@@ -2,6 +2,7 @@ aptitude
 build-essential
 curl
 exuberant-ctags
+htop
 redshift-gtk
 shellcheck
 texlive-full
