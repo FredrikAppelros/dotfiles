@@ -109,7 +109,8 @@ bindsym $mod+r mode "resize"
 
 # Show system information
 bar {
-  status_command i3status
+  status_command i3blocks
+  font pango:Ubuntu Mono, FontAwesome 10
 }
 
 # Remove titles from windows

@@ -1,0 +1,42 @@
+# Global properties
+command=/usr/share/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+# Volume indicator
+[volume]
+label= 
+instance=Master
+interval=once
+signal=10
+
+# Memory usage
+[memory]
+label= 
+interval=30
+
+# Disk usage
+[disk]
+label= 
+interval=30
+
+[wifi]
+label= 
+interval=10
+
+# CPU usage
+[cpu_usage]
+label= 
+interval=10
+
+# Battery indicator
+[battery]
+label= 
+interval=30
+
+# Date Time
+[time]
+label= 
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=5
+
