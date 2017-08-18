@@ -2,17 +2,14 @@
 
 TMPPATH=$(mktemp)
 
-# Download latest git archive
-wget -q -O $TMPPATH https://github.com/git/git/archive/master.zip
+# Get latest diff-so-fancy
+wget -q -O $TMPPATH https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy
 
-# Extract git archive
-unzip $TMPPATH -d /tmp
+# Make diff-so-fancy executable
+chmod +x $TMPPATH
 
-# Make diff-highlight
-make -C /tmp/git-master/contrib/diff-highlight
-
-# Install diff-highlight
-cp /tmp/git-master/contrib/diff-highlight/diff-highlight "$DOTFILESDIR/bin"
+# Install diff-so-fancy
+cp $TMPPATH "$DOTFILESDIR/bin/diff-so-fancy"
 
 TMPPATH=$(mktemp)
 
