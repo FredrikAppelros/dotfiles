@@ -3,7 +3,7 @@
 	email = fredrik.appelros@proceranetworks.com
 [core]
 	editor = vim
-	pager = diff-so-fancy | less -x4
+	pager = less -x4
 [push]
 	default = simple
 [help]
@@ -31,3 +31,7 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[pager]
+	log = diff-highlight | less -x4
+	show = diff-so-fancy | less -x4
+	diff = diff-so-fancy | less -x4
