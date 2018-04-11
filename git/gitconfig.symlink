@@ -1,6 +1,6 @@
 [user]
 	name = Fredrik Appelros
-	email = fredrik.appelros@proceranetworks.com
+	email = fredrik.appelros@gmail.com
 [core]
 	editor = vim
 	pager = less -x4
@@ -32,6 +32,6 @@
 	new = green bold
 	whitespace = red reverse
 [pager]
-	log = diff-highlight | less -x4
+	log = diff-so-fancy | less -x4
 	show = diff-so-fancy | less -x4
 	diff = diff-so-fancy | less -x4
