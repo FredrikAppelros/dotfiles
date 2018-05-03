@@ -2,7 +2,7 @@
 	name = Fredrik Appelros
 	email = fredrik.appelros@gmail.com
 [core]
-	editor = vim
+	editor = code --wait
 	pager = less -x4
 [push]
 	default = simple
