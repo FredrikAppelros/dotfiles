@@ -3,7 +3,6 @@ build-essential
 curl
 exuberant-ctags
 htop
-redshift-gtk
 rofi
 shellcheck
 texlive-full
