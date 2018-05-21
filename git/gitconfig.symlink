@@ -35,3 +35,6 @@
 	log = diff-so-fancy | less -x4
 	show = diff-so-fancy | less -x4
 	diff = diff-so-fancy | less -x4
+[grep]
+	lineNumber = true
+	extendedRegexp = true
