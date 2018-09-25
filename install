@@ -21,7 +21,7 @@ run_scripts () {
 
 # Create symbolic links
 info "Creating symbolic links"
-ln -s "$DOTFILESDIR/bin" "$HOME/bin"
+ln -s "$DOTFILESDIR/bin" "$HOME/.local/bin"
 for target in "$DOTFILESDIR"/**/*.symlink; do
   link=$HOME/.$(basename "${target%.*}")
   ln -s "$target" "$link"
