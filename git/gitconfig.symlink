@@ -19,6 +19,8 @@
 [alias]
 	lg = log --oneline
 	lp = log -p -M
+	lpr = log -p -M --reverse
+    fp = fetch --prune
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
