@@ -17,7 +17,7 @@
 [diff]
 	algorithm = patience
 [alias]
-	lg = log --oneline
+	lg = log --pretty='%C(auto)%h %C(magenta)%G? %C(blue)%<(12,trunc)%ar %C(green)%<(16,trunc)%aN %C(auto)%s%d'
 	lp = log -p -M
 	lpr = log -p -M --reverse
     fp = fetch --prune
